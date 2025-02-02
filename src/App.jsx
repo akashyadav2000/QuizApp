@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="app">
       {quiz.length === 0 ? (
-        <p>Loading or No Quiz Data Available...</p>
+        <p className="loading">Loading please Wait...</p>
       ) : finished ? (
         <div>
           <h2>Quiz Finished!</h2>
