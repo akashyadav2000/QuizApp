@@ -17,3 +17,5 @@ A fun and interactive quiz application built with React. This app allows users t
 - npm install axios
 
 Domaain :- https://quiz-app-app-test.vercel.app/
+
+URl for video and img: https://drive.google.com/drive/folders/16tL6Z-8kPs78iZFoHfr60OmaFmunE9na?usp=drive_link
