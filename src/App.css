@@ -1,0 +1,134 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  text-align: center;
+  height: 100vh; /* Fixed extra scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #e9defa, #f5e3e6);
+  color: white;
+  padding: 20%;
+  overflow: hidden; /* Prevents extra scroll */
+}
+
+/* Question Box */
+h2 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  box-shadow: 0 0 0.6rem 0.4rem #8d8d8d;
+}
+
+/* Options Wrapper (Ensures options appear below the question) */
+.options {
+  display: flex;
+  flex-direction: column; /* Forces options below question */
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Option Buttons */
+button {
+  width: 100%;
+  max-width: 400px;
+  margin: 11px;
+  padding: 12px 25px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  /* color: white; */
+  border-radius: 8px;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(to left, #ffa7ea, #a5e5ff);
+  box-shadow: 0 0 0.7rem 0.6rem #fff;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ff8a00, #ff8a00);
+}
+
+/* Correct Answer */
+.correct {
+  background: linear-gradient(90deg, #28a745, #28a745);
+  color: white;
+  border: 2px solid #28a745;
+}
+
+/* Wrong Answer */
+.wrong {
+  background: linear-gradient(90deg, #dc3545, #c82333);
+  color: white;
+  border: 2px solid #a71d2a;
+}
+
+/* Score Box */
+div h2 + p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: red;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add a delay before moving to the next question */
+.correct,
+.wrong {
+  animation-duration: 2s !important; /* Ensures a 2-second delay */
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 5%; /* Less padding on mobile */
+  }
+
+  /* Question Box */
+  h2 {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  /* Options Wrapper (1 option per row on small screens) */
+  .options {
+    flex-direction: column; /* Stack the options */
+    align-items: center;
+  }
+
+  /* Option Buttons */
+  button {
+    width: 100%; /* Make buttons full-width */
+    margin: 10px 0;
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+}
