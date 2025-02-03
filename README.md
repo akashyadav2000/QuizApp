@@ -16,6 +16,13 @@ A fun and interactive quiz application built with React. This app allows users t
 - npm install
 - npm install axios
 
-Domain :- https://quiz-app-app-test.vercel.app/
+## Domain :- https://quiz-app-app-test.vercel.app/
 
-URl for video and img: https://drive.google.com/drive/folders/16tL6Z-8kPs78iZFoHfr60OmaFmunE9na?usp=drive_link
+## URl for video and img: https://drive.google.com/drive/folders/16tL6Z-8kPs78iZFoHfr60OmaFmunE9na?usp=drive_link
+
+## Handling CORS Issues
+To resolve CORS issues, Option 1 (Using a CORS Proxy) was implemented:
+
+- option 1 = const API_URL = "https://api.allorigins.win/raw?url=https://api.jsonserve.com/Uw5CrX";
+
+- Option 2 = (Creating a Backend Proxy) was also tested and set up successfully, allowing backend handling if needed.
